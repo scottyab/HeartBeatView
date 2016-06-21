@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello Heart beating World!"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/toggleHeart1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="heart1onClick"
+            android:text="Toggle"
+            />
+
+        <com.scottyab.HeartBeatView
+            android:id="@+id/heartbeat"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Shows varying the colour via tint and using setDuration by BPM"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/toggleHeart2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="heart2onClick"
+            android:text="Toggle"
+            />
+
+        <com.scottyab.HeartBeatView
+            android:id="@+id/heartbeat2"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:tint="@android:color/holo_blue_bright"
+            app:duration="100"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/bpm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:labelFor="@+id/beatsPerMinSeek"
+        android:text="BPM: 0"/>
+
+    <SeekBar
+        android:id="@+id/beatsPerMinSeek"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp"
+        android:progressTint="@android:color/holo_blue_bright"
+        android:thumbTint="@android:color/holo_blue_bright"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/toggleHeart3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="heart3onClick"
+            android:text="Toggle"
+            />
+
+        <com.scottyab.HeartBeatView
+            android:id="@+id/heartbeat3"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            app:scaleFactor="0.5"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

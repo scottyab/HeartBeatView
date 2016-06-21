@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="HeartBeatView">
+        <attr name="scaleFactor" format="float" />
+        <attr name="duration" format="integer" />
+    </declare-styleable>
+
+</resources>
