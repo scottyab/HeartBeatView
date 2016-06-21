@@ -29,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
         bpmTV = (TextView) findViewById(R.id.bpm);
         beatsPerMinSeek = (SeekBar) findViewById(R.id.beatsPerMinSeek);
 
+
+        heartbeat2.setDurationBasedOnBPM(50);
         beatsPerMinSeek.setMax(150);
         beatsPerMinSeek.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
@@ -42,12 +44,10 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
-
             }
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-
             }
         });
     }
