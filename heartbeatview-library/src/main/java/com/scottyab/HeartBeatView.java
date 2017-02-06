@@ -45,8 +45,10 @@ public class HeartBeatView extends AppCompatImageView {
     }
 
     private void init() {
+        //make this not mandatory
         heartDrawable = ContextCompat.getDrawable(getContext(), R.drawable.ic_heart_red_24dp);
         setImageDrawable(heartDrawable);
+
     }
 
     private void populateFromAttributes(Context context, AttributeSet attrs) {
@@ -59,6 +61,8 @@ public class HeartBeatView extends AppCompatImageView {
             scaleFactor = a.getFloat(R.styleable.HeartBeatView_scaleFactor, DEFAULT_SCALE_FACTOR);
             reductionScaleFactor = -scaleFactor;
             duration = a.getInteger(R.styleable.HeartBeatView_duration, DEFAULT_DURATION);
+
+
         } finally {
             a.recycle();
         }
